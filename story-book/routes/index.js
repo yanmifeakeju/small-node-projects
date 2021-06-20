@@ -2,7 +2,9 @@ const { Router } = require('express');
 const router = Router();
 
 router.route('/').get(async (req, res, next) => {
-  res.render('login');
+  res.render('login', {
+    layout: 'login',
+  });
 });
 
 router.route('/dashboard').get(async (req, res, next) => {
